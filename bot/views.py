@@ -42,7 +42,7 @@ def contactus(request):
             error_phone="Please enter your phone number."
             count+=1
         else:
-            if len(phone)<10 or len(phone)>11:
+            if len(phone)<10 or len(phone)>11 or not all(i.isdigit for i in phone)::
                 error_phone="Please enter a valid contact number"
                 count+=1
 
